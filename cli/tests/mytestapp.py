@@ -3,7 +3,7 @@ from pyspark import SparkConf, SparkContext
 from operator import add
 import sys
 ## Constants
-APP_NAME = " HelloWorld of Big Data"
+APP_NAME = "Meseeks Test"
 ##OTHER FUNCTIONS/CLASSES
 
 def main(sc):
@@ -22,9 +22,6 @@ if __name__ == "__main__":
 
    # Configure Spark
    conf = SparkConf().setAppName(APP_NAME)
-   conf.set("spark.driver.port", "3000")
-   conf.set("spark.driver.blockManager.port", "3500")
-   conf.set("spark.driver.bindAddress", "0.0.0.0")
    sc   = SparkContext(conf=conf)
    
    # Execute Main functionality
