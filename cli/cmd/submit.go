@@ -31,13 +31,19 @@ var keepAlive = false
 var jars string
 var backend string
 var location string
-var filePath string
 
 var submitCmd = &cobra.Command{
 	Use:   "submit",
 	Short: "submit a spark job",
 	Run: func(cmd *cobra.Command, args []string) {
 		rand.Seed(time.Now().UnixNano())
+
+		if len(args) < 1 {
+			fmt.Println(errors.New("must supply path to app"))
+			return
+		}
+
+		filePath := args[0]
 
 		if existingMaster == "" && location == "" {
 			fmt.Println("required flag(s) 'location' not set")
@@ -151,6 +157,7 @@ func SubmitFileToMaster(submitResponse backends.SubmitResponse, filePath string,
 
 func init() {
 	RootCmd.AddCommand(submitCmd)
+
 	submitCmd.Flags().StringVar(&backend, "backend", "", "the serverless backend for spark (required)")
 	submitCmd.Flags().IntVar(&executorCores, "executor-cores", executorCores, "cores for each executor")
 	submitCmd.Flags().StringVar(&executorMemory, "executor-memory", executorMemory, "memory for each executor")
@@ -158,7 +165,6 @@ func init() {
 	submitCmd.Flags().StringVar(&driverMemory, "driver-memory", driverMemory, "memory for spark driver app")
 	submitCmd.Flags().IntVar(&driverCores, "driver-cores", driverCores, "cores for spark driver app")
 	submitCmd.Flags().StringVar(&class, "class", "", "the entry point for your application (e.g. org.apache.spark.examples.SparkPi)")
-	submitCmd.Flags().StringVar(&filePath, "file", "", "path to jar or py file")
 	submitCmd.Flags().StringVar(&location, "location", "", "region for provisioned resources")
 	submitCmd.Flags().StringVar(&driverClassPath, "driver-class-path", "", "class paths for spark driver program")
 	submitCmd.Flags().StringVar(&jars, "jars", "", "additional jars to be transffered to the cluster")
