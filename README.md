@@ -35,7 +35,7 @@ This enables a true "pay per use" model for Spark.
 ### Install the CLI ###
 
 Download the correct Binary depending on your OS from the [Releases page](https://github.com/legion/legion/releases). <br>
-Copy the binary to your bin path and you're good to go.
+Extract and copy the binary to your bin path and you're good to go.
 
 ### Command-Line Usage
 
