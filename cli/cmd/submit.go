@@ -44,6 +44,11 @@ var submitCmd = &cobra.Command{
 			return
 		}
 
+		if existingMaster != "" && numExecutors > 0 && location == "" {
+			fmt.Println("required flag(s) 'location' not set")
+			return
+		}
+
 		if _, err := os.Stat(filePath); os.IsNotExist(err) {
 			fmt.Println("file at " + filePath + " not found.")
 			return
