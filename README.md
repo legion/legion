@@ -8,6 +8,12 @@ Legion is a system for deploying Apache Spark on different serverless compute cl
 
 ## About
 
+Benefits of Legion:
+
+* No infrastructure to setup or operate
+* Per second billable executions - pay per Spark job
+* Deploy Spark Workers in seconds 
+<br>
 Legion currently supports Azure Container Instances as a serverless backend platform.
 Legion provides a simple CLI to submit jobs to backend platforms.
 The legion submit command is similar to Spark's submit command, allowing for a dynamic creation of serverless components as the Spark executors.
