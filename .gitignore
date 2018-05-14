@@ -3,3 +3,4 @@
 /cli/**/*cli
 **/*legion
 **/*dist
+**/*.tar
