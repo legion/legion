@@ -192,7 +192,7 @@ func (a *AzureContainerInstancesBackend) deployMaster(master utils.ACI) (string,
 		return "", err
 	}
 
-	fmt.Println("master deployed")
+	fmt.Println("master deployed - ~50 seconds to Running state")
 	running := false
 	ipAddress := ""
 
@@ -240,7 +240,7 @@ func (a *AzureContainerInstancesBackend) deployWorkers(workers []utils.ACI, mast
 		}
 
 		wg.Wait()
-		fmt.Println("Finished deploying " + strconv.Itoa(len(workers)) + " workers")
+		fmt.Println("Finished deploying " + strconv.Itoa(len(workers)) + " workers. ~40 seconds for each worker to join the cluster.")
 	}
 
 	return nil
