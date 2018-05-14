@@ -103,8 +103,6 @@ func (a *AzureContainerInstancesBackend) Submit(executorCores int, executorMemor
 	a.CLI = utils.NewCliExecutor(os.Getenv("APP_ID"), os.Getenv("PASSWORD"), os.Getenv("TENANT_ID"))
 	a.CLI.Login()
 
-	// create when - 1. master exists and executors > 0   2. master doesnt exist and executors are => 0
-
 	if (existingMaster != "" && numExecutors > 0) || (existingMaster == "") {
 		err := a.CLI.CreateResourceGroup(resourceGroup, location)
 
