@@ -114,3 +114,8 @@ $ legion deploy-master --driver-cores 2 --driver-memory 2g --location westus --b
 * Setup and install [Docker](https://docs.docker.com/install/).
 * Run ``` go get -d ./...``` to get all dependencies.
 
+### Adding backends
+
+Legion supports a plugin enabled architecture that allows for creating new backends quickly. <br>
+Take a look at the aci_backend.go implementation for Azure Container Instances to see an example of how to build a backend.
+
