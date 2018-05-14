@@ -4,6 +4,8 @@ Legion is a system for deploying Apache Spark on different serverless compute cl
 
 *Note: Legion is experimental software*
 
+[![asciicast](https://asciinema.org/a/181563.png)](https://asciinema.org/a/181563)
+
 ## About
 
 Legion currently supports Azure Container Instances as a serverless backend platform.
