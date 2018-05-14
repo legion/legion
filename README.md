@@ -127,3 +127,8 @@ $ legion deploy-master --driver-cores 2 --driver-memory 2g --location westus --b
 Legion supports a plugin enabled architecture that allows for creating new backends quickly. <br>
 Take a look at the aci_backend.go implementation for Azure Container Instances to see an example of how to build a backend.
 
+## Future plans
+
+* Allow to submit Java/Scala apps
+* Implement more backends, such as Azure Functions, AWS Labmda / Fargate, etc
+* Implement point in time and streaming logs functionality
