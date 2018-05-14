@@ -82,19 +82,19 @@ To see the CLI help, just type ```$ legion``` to see the help menu.
 Deploy a Python Spark app with 4 executors of 4 vcpus and 8gb each, and a master with 2 vcpus and 2gb in Azure West US
 
 ```
-$ legion submit --executor-cores 4 --executor-memory 8g --driver-cores 2 --driver-memory 2g --location westus --num-executors 4 --backend aci --file ./myapp.py
+$ legion submit --executor-cores 4 --executor-memory 8g --driver-cores 2 --driver-memory 2g --location westus --num-executors 4 --backend aci ./myapp.py
 ```
 
 Use an existing Spark Master
 
 ```
-$ legion submit --master <IP-ADDRESS OR FQDN> --backend aci --file ./myapp.py
+$ legion submit --master <IP-ADDRESS OR FQDN> --backend aci ./myapp.py
 ```
 
 Keep workers running after job is completed
 
 ```
-$ legion submit --executor-cores 4 --executor-memory 8g --driver-cores 2 --driver-memory 2g --location westus --num-executors 4 --backend aci --file ./myapp.py --keep-alive true
+$ legion submit --executor-cores 4 --executor-memory 8g --driver-cores 2 --driver-memory 2g --location westus --num-executors 4 --backend aci ./myapp.py --keep-alive true
 ```
 
 Deploy Legion Master in Azure West US
