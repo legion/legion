@@ -1,0 +1,5 @@
+**/*.vscode
+**/*debug
+/cli/**/*cli
+**/*legion
+**/*dist
