@@ -81,7 +81,11 @@ Set the following environment variables:
 
 <br>
 All set!
-To see the CLI help, just type ```$ legion``` to see the help menu.
+To see the CLI help info:
+
+```
+$ legion -h
+```
 
 ### Examples
 
