@@ -51,17 +51,18 @@ Extract and copy the binary to your bin path and you're good to go.
 Run Serverless On-Demand Spark Jobs on Cloud Native platforms
 
 Usage:
-  0.0.1 [command]
+  legion [command]
 
 Available Commands:
   deploy-master deploy a legion master
   help          Help about any command
   submit        submit a spark job
+  version       Show legion version
 
 Flags:
-  -h, --help   help for 0.0.1
+  -h, --help   help for legion
 
-Use "0.0.1 [command] --help" for more information about a command.
+Use "legion [command] --help" for more information about a command.
 ```
 
 ### Azure Container Instances
