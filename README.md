@@ -4,7 +4,7 @@ Legion is a system for deploying Apache Spark on different serverless compute cl
 
 *Note: Legion is experimental software*
 
-[![asciicast](https://asciinema.org/a/181563.png)](https://asciinema.org/a/189943)
+[![asciicast](https://asciinema.org/a/189943.png)](https://asciinema.org/a/189943)
 
 ## About
 
